@@ -1,13 +1,85 @@
+<!DOCTYPE html>
 <html>
+<head>
 
-
-
-
-
-
-
+</head>
+<body>
+    
 <script>
+var playerScore=0
+var computerScore=0
+
+function computerPlay(){
+    var optiones=['rock','paper','scissors']
+    
+    return optiones[Math.floor(Math.random() * optiones.length)];
+}
+
+
+
+computerSelection=computerPlay();
+
+
+function playRound(playerSelection,computerSelection){
+    var choice=prompt('Rock Paper or scissors?')
+    var userinput=choice
+    playerSelection=userinput.toLowerCase()
+	if (playerSelection=='rock'&&computerSelection=='paper'){
+        console.log('You Lose Paper beats rock')
+        computerScore++
+    }else if (playerSelection=='paper'&&computerSelection=='rock'){
+        console.log('You WIn paper beats rock')
+        playerScore++
+    } else if (playerSelection=='rock'&&computerSelection=='scissors'){
+        console.log('You  win rock beats scissors')
+        playerScore++
+    }else if (computerSelection=='rock'&&playerSelection=='scissors'){
+        console.log('You lose rock Beats Scissors')
+        computerScore++
+    }else if (playerSelection=='paper'&&computerSelection=='scissors'){
+        console.log('You Lose Scissors Wins')
+        computerScore++
+    }else if (playerSelection=='scissors'&&computerSelection=='rock'){
+        console.log('You Lose Rock Wins')
+    }else if(playerSelection=='scissors'&&computerSelection=='paper'){
+        console.log('You WIn scissors beats paper')
+        playerScore++
+    }else if (computerSelection=='scissors'&&playerSelection=='paper'){
+        console.log('You Lose scissors beats paper')
+        omputerScore++
+    }else {
+        console.log('it\'s a tie')
+    }
+    console.log(playerScore)
+    console.log(computerScore)
+    return ;
+}
+
+
+
+
+function game(){
+    
+    playRound('',computerSelection)
+    playRound('',computerSelection)
+    playRound('',computerSelection)
+    playRound('',computerSelection)
+    playRound('',computerSelection)
+
+if (playerScore>computerScore){
+    console.log('You Have Won')
+}else {
+    console.log('You Have Lost Machines Have Won')
+}
+}
+
+
+console.log(game())
+
+
 
 </script>
+
+</body>
 
 </html>
