@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
 </head>
 <body>
     
@@ -14,11 +15,6 @@ function computerPlay(){
     
     return optiones[Math.floor(Math.random() * optiones.length)];
 }
-
-
-
-computerSelection=computerPlay();
-
 
 function playRound(playerSelection,computerSelection){
     var choice=prompt('Rock Paper or scissors?')
@@ -60,11 +56,11 @@ function playRound(playerSelection,computerSelection){
 
 function game(){
     
-    playRound('',computerSelection)
-    playRound('',computerSelection)
-    playRound('',computerSelection)
-    playRound('',computerSelection)
-    playRound('',computerSelection)
+    playRound('',computerPlay())
+    playRound('',computerPlay())
+    playRound('',computerPlay())
+    playRound('',computerPlay())
+    playRound('',computerPlay())
 
 if (playerScore>computerScore){
     console.log('You Have Won')
