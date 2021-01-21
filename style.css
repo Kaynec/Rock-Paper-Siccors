@@ -15,13 +15,13 @@ body {
     scale: 1.1;
 }
 #para {
-    font-size: 40px;
+    font-size: 20px;
     text-align: center;
     color: rgb(48, 43, 43);
     padding-top: 2rem;
 }
 #para2 {
-    font-size: 25px;
+    font-size: 12.5px;
     text-align: center;
     color: rgb(48, 43, 43);
     padding-top: 0.7rem;
@@ -33,8 +33,29 @@ body {
     width: 5rem;
 }
 #para3 {
-    font-size: 25px;
+    font-size: 12.5px;
     text-align: center;
     color: rgb(48, 43, 43);
     padding-top: 0.7rem;
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+        background:rgb(125, 200, 206);
+    }
+    #container {
+        flex-direction: column;
+        margin: 0;
+    }
+    #container div {
+        font-size: 90px;
+        text-align: center;
+        padding:0 ;
+    }
+    #para {
+        padding:0.25rem ;
+    }
+    #para2 {
+        padding:0.25rem;
+    }
+  }
